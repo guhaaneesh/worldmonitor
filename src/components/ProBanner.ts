@@ -43,6 +43,9 @@ function dismiss(): void {
 }
 
 export function showProBanner(container: HTMLElement): void {
+  // Pro banner disabled
+  return;
+
   // Cache container even on early-return paths so the entitlement-change
   // listener can re-mount on a downgrade. App.ts calls this once at init
   // regardless of premium state, so caching here covers both "initially

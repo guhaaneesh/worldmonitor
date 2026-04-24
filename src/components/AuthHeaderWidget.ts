@@ -50,20 +50,8 @@ export class AuthHeaderWidget {
   }
 
   private renderSignedOut(): void {
-    const signInBtn = document.createElement('button');
-    signInBtn.className = 'auth-signin-btn';
-    signInBtn.textContent = t('auth.signIn');
-    signInBtn.addEventListener('click', () => {
-      if (this.onSignInClick) this.onSignInClick();
-      else openSignIn();
-    });
-    this.container.appendChild(signInBtn);
-
-    const signUpLink = document.createElement('button');
-    signUpLink.className = 'auth-signup-link';
-    signUpLink.textContent = t('auth.createAccount');
-    signUpLink.addEventListener('click', () => openSignUp());
-    this.container.appendChild(signUpLink);
+    // Sign in banner disabled
+    return;
   }
 
   private renderSignedIn(): void {
